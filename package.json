@@ -5,12 +5,13 @@
   "type": "module",
   "homepage": "https://cristianibanezvillarroel.github.io/ProyectoAppRestauranteCristianIbanez",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "react",
+    "build": "react-scripts build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "preview": "vite preview"
+    "start": "react-scripts start",
+    "preview": "react preview"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
