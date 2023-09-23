@@ -7,8 +7,6 @@ import '/src/components/Estilos.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename='/ProyectoRestauranteCristianIbanez'>
-    <React.StrictMode>
       <App />
-    </React.StrictMode>
   </BrowserRouter>
 )
