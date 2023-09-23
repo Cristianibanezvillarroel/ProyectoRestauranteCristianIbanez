@@ -1,7 +1,6 @@
 {
   "name": "proyectorestaurantecristianibanez",
-  "private": false,
-  "public": true,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://cristianibanezvillarroel.github.io/ProyectoRestauranteCristianIbanez",
