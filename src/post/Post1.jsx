@@ -10,7 +10,7 @@ export const Post1 = () => {
                 src=
                 "/src/assets/Frutas.jpg"
                 width={20}
-                height={250}
+                height={260}
             />
             <Card.Body>
                 <Card.Title>COMER SANO Y SALUDABLE</Card.Title>
