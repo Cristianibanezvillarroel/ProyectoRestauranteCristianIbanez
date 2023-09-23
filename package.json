@@ -1,10 +1,10 @@
 {
-  "name": "proyectoapprestaurantecristianibanez",
+  "name": "proyectorestaurantecristianibanez",
   "private": false,
   "public": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://cristianibanezvillarroel.github.io/ProyectoAppRestauranteCristianIbanez",
+  "homepage": "https://cristianibanezvillarroel.github.io/ProyectoRestauranteCristianIbanez",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
