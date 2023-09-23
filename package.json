@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "/ProyectoRestauranteCristianIbanez/#",
+  "homepage": "https:///cristianibanezvillarroel.github.io/proyectorestaurantecristianibanez",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
