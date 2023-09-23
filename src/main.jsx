@@ -6,7 +6,9 @@ import { BrowserRouter } from 'react-router-dom'
 import '/src/components/Estilos.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename='/ProyectoRestauranteCristianIbanez'>
+  <BrowserRouter>
+    <React.StrictMode>
       <App />
+    </React.StrictMode>
   </BrowserRouter>
 )
