@@ -6,6 +6,7 @@ import { Carta } from './routes/Carta'
 import { Blog } from './routes/Blog'
 import { Reservas } from './routes/Reservas'
 import { CartaDetail } from './routes/CartaDetail'
+import { Footer } from './components/Footer'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/blog' element={<Blog />}></Route>
         <Route path='/carta/:categoria' element={<CartaDetail />}></Route>
       </Routes>
+      <Footer/>
     </>
   )
 }
