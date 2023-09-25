@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import {Container, Button , Alert} from 'react-bootstrap';
+import { Container, Button, Alert } from 'react-bootstrap';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
 
 export const Reservas = () => {
   const allMonthValues = [
@@ -25,6 +28,7 @@ export const Reservas = () => {
 
   const [show, setShow] = useState(false);
 
+
   const handleDateChange = (value) => {
     setSelectedDate(value);
     setCalendarText(`El dia seleccionado es ${value.toDateString()}`);
@@ -38,6 +42,16 @@ export const Reservas = () => {
   const handleMonthChange = (value) => {
     const monthValue = allMonthValues[value.getMonth()];
     setCalendarText(`${monthValue} Mes seleccionado`);
+  };
+
+   const [horario, setHorario] = useState('');
+  const handleHorario = (e) => {
+    setHorario(e)
+  };
+
+  const [mesa, setMesa] = useState('');
+  const handleMesa = (e) => {
+    setMesa(e)
   };
 
   if (show) {
@@ -54,8 +68,31 @@ export const Reservas = () => {
     );
   }
 
+ 
   return (
     <div className="calendar-css">
+      <DropdownButton
+        id="dropdown-button-dark-example2"
+        variant="secondary"
+        title={mesa ? mesa : "seleccione su mesa"}
+        className="mt-2"
+        data-bs-theme="dark"
+        onSelect={handleMesa}
+      >
+        <Dropdown.Item eventKey="Mesa1">Mesa 1</Dropdown.Item>
+        <Dropdown.Item eventKey="Mesa2">Mesa 2</Dropdown.Item>
+      </DropdownButton>
+      <DropdownButton
+        id="dropdown-button-dark-example2"
+        variant="secondary"
+        title={horario ? horario : "seleccione su horario"}
+        className="mt-2"
+        data-bs-theme="dark"
+        onSelect={handleHorario}
+      >
+        <Dropdown.Item eventKey="am">horario am</Dropdown.Item>
+        <Dropdown.Item eventKey="pm">horario pm</Dropdown.Item>
+      </DropdownButton>
       <h2 className="calander-details">{calendarText}</h2>
       <Calendar
         onClickMonth={handleMonthChange}
@@ -65,7 +102,7 @@ export const Reservas = () => {
       />
       <div className="d-grid gap-2">
         <Button onClick={() => setShow(true)} variant="primary" size="lg">
-          {selectedDate ? 'Enviar Reserva' : 'Debe seleccionar un dia para enviar Reserva'}
+          {selectedDate ? mesa ? horario ? 'Enviar Reserva':'Debe seleccionar un horario para enviar Reserva' :'Debe seleccionar una mesa para enviar Reserva' :'Debe seleccionar un dia para enviar Reserva'}
         </Button>
       </div>
     </div>
