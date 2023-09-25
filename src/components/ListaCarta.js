@@ -15,14 +15,14 @@ export const ListaCarta = [
             'nombre': 'Palta reina',
             'precio': '$ 8.500',
             'descripcion': 'Preparados con la mejor palta de la zona',
-            'imagen': './Paltareina.jpg'
+            'imagen': "../Paltareina.jpg"
         },
         {
             'idItem': 2,
             'nombre': 'Ceviche salmon',
             'precio': '$ 9.500',
             'descripcion': 'Con delicados toques de leche',
-            'imagen': './Cevichesalmon.jpg'
+            'imagen': "../Cevichesalmon.jpg"
         }
     ]},
     {'id':1,
@@ -33,21 +33,21 @@ export const ListaCarta = [
             'nombre': 'Cazuela',
             'precio': '$ 10.500',
             'descripcion': 'Preparada en greda y calentada en punto de coccion optimo',
-            'imagen': './Cazuela.jpg'
+            'imagen': "../Cazuela.jpg"
         },
         {
             'idItem': 4,
             'nombre': 'Bistec a lo Pobre',
             'precio': '$ 11.500',
             'descripcion': 'Con papas crujientes y un sabroso jugo con especias sobre la carne',
-            'imagen': './Bistecalopobre.jpg'
+            'imagen': "../Bistecalopobre.jpg"
         },
         {
             'idItem': 5,
             'nombre': 'Porotos',
             'precio': '$ 12.500',
             'descripcion': 'Con un toque especial de aceite vegetal y saborizantes sureños',
-            'imagen': './Porotos.jpg'
+            'imagen': "../Porotos.jpg"
         }
     ]},
     {'id':2,
@@ -58,21 +58,21 @@ export const ListaCarta = [
             'nombre': 'Helado',
             'precio': '$ 13.500',
             'descripcion': 'En sabores de frutilla, vainilla, chocholate y pistacho',
-            'imagen': './Helado.jpg'
+            'imagen': "../Helado.jpg"
         },
         {
             'idItem': 7,
             'nombre': 'Volcan Chocolate',
             'precio': '$ 14.500',
             'descripcion': 'Con la mejor receta de la zona que seguro usted querra volver a probar',
-            'imagen': './Volcandechocolate.jpg'
+            'imagen': "../Volcandechocolate.jpg"
         },
         {
             'idItem': 8,
             'nombre': 'Kuchen',
             'precio': '$ 15.500',
             'descripcion': 'Traidos directamente desde el sur con las mejores frutas de la zona',
-            'imagen': './Kuchen.jpg'
+            'imagen': "../Kuchen.jpg"
         }
     ]}
 ]
