@@ -8,7 +8,7 @@ export const ListaCarta = [
             'nombre': 'Camarones apanados',
             'precio': '$ 7.500',
             'descripcion': 'Preparados con un toque aromatico especial junto con una salsa verde hecha en casa',
-            'imagen': './Camarones.jpg'
+            'imagen': '../Camarones.jpg'
         },
         {
             'idItem': 1,
