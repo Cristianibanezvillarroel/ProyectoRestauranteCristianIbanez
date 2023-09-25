@@ -19,7 +19,7 @@ export const CartaDetail = () => {
           {categoriaFiltrada.map(content =>
             content.items.map(item =>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={item.imagen} />
+                <Card.Img variant="top" src={item.imagen} className="card-img"/>
                 <Card.Body>
                   <Card.Title>{item.nombre}</Card.Title>
                   <Card.Text>

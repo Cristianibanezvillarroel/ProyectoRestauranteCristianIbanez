@@ -23,3 +23,8 @@
 .div-contactanos div {
     font-family: 'Playfair Display', serif;
 }
+
+.card-img {
+    height: 200px;
+    margin-top: 10px;
+}
