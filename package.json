@@ -3,7 +3,7 @@
   "name": "proyectorestaurantecristianibanez",
   "private": true,
   "version": "0.1.0",
-  "type": "module",  
+  "type": "module",
   "scripts": {
     "start": "react-scripts start",
     "dev": "vite",
@@ -17,6 +17,7 @@
     "bootstrap": "^5.3.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
+    "react-calendar": "^4.6.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0"
   },
