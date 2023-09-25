@@ -8,7 +8,7 @@ export const Post2 = () => {
             <Card.Img
                 variant="top"
                 src=
-                "/src/assets/Deporte.jpg"
+                "./Deporte.jpg"
                 width={20}
                 height={250}
             />
