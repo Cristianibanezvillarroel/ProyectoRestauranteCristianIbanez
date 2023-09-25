@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, FloatingLabel, Form } from 'react-bootstrap'
+import {Container, Alert} from 'react-bootstrap';
 
 export const Formulario = () => {
+
+    const [show, setShow] = useState(false);
+    if (show) {
+        return (
+            <div className="App">
+                <Container className='p-4'>
+                    <Alert variant="success" onClose={() => setShow(false)} dismissible >
+                        <Alert.Heading>Sus datos han sido enviados con éxito</Alert.Heading>
+                        <p>
+                            Cierre esta ventana para volver al menu</p>
+                    </Alert>
+                </Container>
+            </div>
+        );
+    }
     return (
         <>
             <FloatingLabel
@@ -32,7 +48,7 @@ export const Formulario = () => {
                     style={{ height: '100px' }}
                 />
             </FloatingLabel>
-            <Button variant="primary" type="submit">Enviar</Button>
+            <Button onClick={() => setShow(true)} variant="primary" >Enviar</Button>
         </>
     )
 }
