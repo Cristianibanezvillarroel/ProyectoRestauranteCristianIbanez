@@ -8,7 +8,7 @@ export const Resena = () => {
                 <Card.Img
                     variant="top"
                     src=
-                    "./src/assets/resena.jpg"
+                    "../src/assets/resena.jpg"
                     width={20}
                     height={300}
                 />
