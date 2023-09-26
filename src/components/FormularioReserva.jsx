@@ -6,7 +6,7 @@ import { FloatingLabel, Form } from 'react-bootstrap'
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { db } from '../components/firebase';
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, getDocs } from "firebase/firestore";
 
 
 
@@ -74,6 +74,23 @@ export const FormularioReserva = () => {
         setValueTelefono(e.target.value);
     }
 
+    const [reservasCuenta, setReservasCuenta] = useState([]);
+
+
+    const fetchPostCuenta = async () => {
+        const querySnapshot = await getDocs(collection(db, 'reservas'))
+        querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data()}`);
+            setReservasCuenta(reservasCuenta => [...reservasCuenta, doc.data()])            
+        });
+    }
+
+    useEffect(() => {
+        fetchPostCuenta()
+    }, []);
+
+    const id = reservasCuenta.length + 1;
+
     const fetchAdd = async () => {
         const docRef = await addDoc(collection(db, "reservas"), {
             email: valueEmail,
@@ -81,10 +98,13 @@ export const FormularioReserva = () => {
             telefono: valueTelefono,
             mesa: mesa,
             horario: horario,
-            fecha: '2023-09-26'            
+            fecha: '2023-09-26',
+            id: id          
         });
         setShow(true);
     }
+
+
 
     if (show) {
         return (

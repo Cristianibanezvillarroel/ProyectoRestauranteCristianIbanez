@@ -16,8 +16,7 @@ export const ListaReservas = () => {
         querySnapshot.forEach((doc) => {
             console.log(`${doc.id} => ${doc.data()}`);
             setReservas(reservas => [...reservas, doc.data()])            
-        }        
-        );
+        });
     }
 
     useEffect(() => {
