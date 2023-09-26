@@ -58,8 +58,6 @@ export const FormularioReserva = () => {
         setMesa(e)
     };
 
-    const [data, setData] = useState([]);
-
     const [valueEmail, setValueEmail] = useState('');
     const [valueNombre, setValueNombre] = useState('');
     const [valueTelefono, setValueTelefono] = useState('');
