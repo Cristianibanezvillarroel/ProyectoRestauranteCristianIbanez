@@ -7,6 +7,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { db } from '../components/firebase';
 import { collection, addDoc, getDocs } from "firebase/firestore";
+import dayjs from 'dayjs';
 
 
 
@@ -27,10 +28,12 @@ export const FormularioReserva = () => {
     ];
 
     const [selectedDate, setSelectedDate] = useState();
-
+    
     const [calendarText, setCalendarText] = useState(`No ha seleccionado ningun dia`);
 
     const [show, setShow] = useState(false);
+
+    const [date, setDate] = useState(new Date());
 
 
     const handleDateChange = (value) => {
@@ -90,7 +93,8 @@ export const FormularioReserva = () => {
     }, []);
 
     const id = reservasCuenta.length + 1;
-
+    const formatDay = dayjs(selectedDate).format('YYYY-MM-DD')
+    
     const fetchAdd = async () => {
         const docRef = await addDoc(collection(db, "reservas"), {
             email: valueEmail,
@@ -98,12 +102,11 @@ export const FormularioReserva = () => {
             telefono: valueTelefono,
             mesa: mesa,
             horario: horario,
-            fecha: '2023-09-26',
+            fecha: formatDay,
             id: id          
         });
         setShow(true);
     }
-
 
 
     if (show) {

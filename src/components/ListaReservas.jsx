@@ -29,7 +29,7 @@ export const ListaReservas = () => {
             <h1>Las reservas de La mia Papo</h1>
             <ol>
 
-                {reservas.map(reserva => <li key={reserva.id}>{reserva.nombre} {reserva.email} {reserva.mesa} {reserva.telefono}</li>
+                {reservas.map(reserva => <li key={reserva.id}>{reserva.nombre} {reserva.email} {reserva.mesa} {reserva.fecha} {reserva.telefono}</li>
                 )
                 }
 
